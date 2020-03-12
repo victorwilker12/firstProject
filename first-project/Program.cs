@@ -17,9 +17,10 @@ namespace first_project
             city.Add("Fortaleza");
             city.Add("Mogi Mirin");
             city.Add("Rio de Janeiro");
-
+            // searchs 
             Console.WriteLine(SearchText(city, "Fortaleza"));
-            Console.WriteLine(SearchLinq(city, "Mogi Mirin"));
+            SearchLinq(city, "Fortaleza").ForEach(x => Console.WriteLine(x));
+            Console.WriteLine(SearchLinqLambda(city, "Rio de Janeiro"));
             Console.ReadKey();
         }
 
@@ -33,11 +34,14 @@ namespace first_project
             return null;
         }
 
-        public static string SearchLinq(List<string> List, string termo)
+        public static List<string> SearchLinq(List<string> List, string termo)
         {
-            return "item encontrado: " + (from item in List where item.Equals(termo) select item).First();
+            return (from item in List where item.Equals(termo) select item).ToList();
         }
-        public static string Busca
+        public static string SearchLinqLambda(List<string> List,string termo)
+        {
+            return "Item Encontrado: "+ List.First(x => x.Equals(termo));
+        }
     }
 
     
