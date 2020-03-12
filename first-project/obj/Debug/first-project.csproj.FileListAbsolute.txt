@@ -1,0 +1,6 @@
+C:\Users\Convidado1\workspace\first-project\first-project\bin\Debug\first-project.exe.config
+C:\Users\Convidado1\workspace\first-project\first-project\bin\Debug\first-project.exe
+C:\Users\Convidado1\workspace\first-project\first-project\bin\Debug\first-project.pdb
+C:\Users\Convidado1\workspace\first-project\first-project\obj\Debug\first-project.exe
+C:\Users\Convidado1\workspace\first-project\first-project\obj\Debug\first-project.pdb
+C:\Users\Convidado1\workspace\first-project\first-project\obj\Debug\first-project.csprojResolveAssemblyReference.cache
