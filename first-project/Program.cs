@@ -5,8 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
+
+
+
 namespace first_project
 {
+
+    class Car
+    {
+        public string Name { get; set; }
+        public string Marca { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -17,7 +28,24 @@ namespace first_project
             city.Add("Fortaleza");
             city.Add("Mogi Mirin");
             city.Add("Rio de Janeiro");
-            // searchs 
+
+
+            Car[] cars =
+            {
+            new Car { Name="Oelta",Marca="GM"},
+            new Car { Name="Onix",Marca="GM"},
+            new Car { Name="Oamaro",Marca="GM"}
+        };
+            // search first Caractere in list to string 
+            bool SearchAll = cars.All(x => x.Name.StartsWith("O"));
+            Console.WriteLine(
+                "{0} cars name",
+                SearchAll ? "All" : "not All");
+            
+            Console.ReadKey();
+
+
+            // searchs  
             Console.WriteLine(SearchText(city, "Fortaleza"));
             SearchLinq(city, "Fortaleza").ForEach(x => Console.WriteLine(x));
             Console.WriteLine(SearchLinqLambda(city, "Rio de Janeiro"));
